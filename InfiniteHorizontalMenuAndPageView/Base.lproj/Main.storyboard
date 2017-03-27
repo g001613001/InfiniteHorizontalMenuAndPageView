@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InfiniteHorizontalMenuAndPageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dT-qX-nVB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Aaa-gj-EKA"/>
+                                    <constraint firstAttribute="width" constant="375" id="pt7-AZ-pRJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e59-wk-ICC">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9dT-qX-nVB" secondAttribute="trailing" id="GRQ-St-Eft"/>
+                            <constraint firstItem="e59-wk-ICC" firstAttribute="top" secondItem="9dT-qX-nVB" secondAttribute="bottom" id="U5r-SA-PWp"/>
+                            <constraint firstAttribute="trailing" secondItem="e59-wk-ICC" secondAttribute="trailing" id="cdq-Rc-Qrr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e59-wk-ICC" secondAttribute="bottom" id="czG-5e-gsK"/>
+                            <constraint firstItem="e59-wk-ICC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g21-NT-ECC"/>
+                            <constraint firstItem="9dT-qX-nVB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h3k-3V-0NA"/>
+                            <constraint firstItem="9dT-qX-nVB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z1N-Qy-9E0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="view4HorizontalMenu" destination="9dT-qX-nVB" id="siC-Bd-cFF"/>
+                        <outlet property="view4Page" destination="e59-wk-ICC" id="9YK-Dl-bi0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>

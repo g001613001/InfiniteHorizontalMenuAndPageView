@@ -1,0 +1,6 @@
+framework module Pods_InfiniteHorizontalMenuAndPageView {
+  umbrella header "Pods-InfiniteHorizontalMenuAndPageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

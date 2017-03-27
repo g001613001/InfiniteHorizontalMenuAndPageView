@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bSB-UP-PLE">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Infinite Page ViewVC-->
+        <scene sceneID="VMU-r8-tpo">
+            <objects>
+                <viewController id="bSB-UP-PLE" customClass="InfinitePageViewVC" customModule="iTVCloud" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D4U-dC-Dsb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ef9-W0-JVG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJf-Lj-RRe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZTA-kU-0Jf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OQK-wP-0nG">
+                                    <size key="itemSize" width="320" height="480"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageCell" id="bZV-KC-6lS" customClass="InfinitePageViewCVCell" customModule="iTVCloud" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-pu-1J3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="od9-pu-1J3" secondAttribute="bottom" id="QOL-h6-Xcr"/>
+                                            <constraint firstItem="od9-pu-1J3" firstAttribute="top" secondItem="bZV-KC-6lS" secondAttribute="top" id="VON-cc-Eqj"/>
+                                            <constraint firstItem="od9-pu-1J3" firstAttribute="leading" secondItem="bZV-KC-6lS" secondAttribute="leading" id="mBg-nV-mqT"/>
+                                            <constraint firstAttribute="trailing" secondItem="od9-pu-1J3" secondAttribute="trailing" id="uY0-aY-hIQ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="view4Page" destination="od9-pu-1J3" id="uMh-Wn-Lt2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="bSB-UP-PLE" id="bhQ-Fe-evX"/>
+                                    <outlet property="delegate" destination="bSB-UP-PLE" id="ABD-QD-ctS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZTA-kU-0Jf" firstAttribute="top" secondItem="iJf-Lj-RRe" secondAttribute="top" id="0cN-Xg-La8"/>
+                            <constraint firstAttribute="trailing" secondItem="ZTA-kU-0Jf" secondAttribute="trailing" id="Ghp-8L-Kx2"/>
+                            <constraint firstItem="Ef9-W0-JVG" firstAttribute="top" secondItem="ZTA-kU-0Jf" secondAttribute="bottom" id="J1A-5r-Ojs"/>
+                            <constraint firstItem="ZTA-kU-0Jf" firstAttribute="leading" secondItem="iJf-Lj-RRe" secondAttribute="leading" id="RXM-zI-AhO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ZTA-kU-0Jf" id="Lm5-rb-0lG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oz5-XY-jf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="-205"/>
+        </scene>
+    </scenes>
+</document>
